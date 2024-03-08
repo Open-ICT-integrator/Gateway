@@ -5,6 +5,7 @@ import { UserModule } from './user/user.module';
 import { User } from './user/models/user.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
+import { DoughnutsModule } from './doughnuts/doughnuts.module';
 
 
 @Module({
@@ -13,7 +14,7 @@ import { AuthModule } from './auth/auth.module';
     database: 'db/sql',
     synchronize: true,
     entities: [User],
-  }),UserModule, AuthModule],
+  }),UserModule, AuthModule, DoughnutsModule],
   controllers: [AppController],
   providers: [AppService],
 })
